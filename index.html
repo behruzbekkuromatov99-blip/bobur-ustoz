@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Устозлар куни · Бобур устоз</title>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;600&display=swap" rel="stylesheet">
 <style>
 :root{--g:#d8b96f;--gd:#8f7a45;--em:#0a3d2f;--tx:#f3efe2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box;margin:0}
@@ -14,15 +14,16 @@ body{font-family:Jost,system-ui,sans-serif;font-weight:300;color:var(--tx);line-
 .top,main,footer,.corner{position:relative;z-index:2}
 .top{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;z-index:30}
 .pill{display:flex;border:1px solid var(--gd);border-radius:40px;padding:5px;background:rgba(3,26,18,.6);backdrop-filter:blur(6px)}
-.pill button{background:none;border:0;color:var(--gd);padding:8px 14px;border-radius:30px;font:400 .85rem Jost,sans-serif;letter-spacing:.12em;cursor:pointer}
-.pill button.on{background:#135f48;color:#fff}
-.mb{width:52px;height:52px;border-radius:50%;border:1px solid var(--gd);background:rgba(3,26,18,.6);cursor:pointer;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding:17px 0;position:relative}
+.pill button{background:none;border:0;color:var(--gd);padding:8px 14px;border-radius:30px;font:400 .85rem Jost,sans-serif;letter-spacing:.12em;cursor:pointer;transition:.3s}
+.pill button.on{background:#135f48;color:#fff;box-shadow:0 0 10px rgba(127,227,176,.3)}
+.mb{width:52px;height:52px;border-radius:50%;border:1px solid var(--gd);background:rgba(3,26,18,.6);cursor:pointer;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding:17px 0;position:relative;transition:.3s}
+.mb:hover{border-color:var(--g);transform:scale(1.05)}
 .mb i{width:3px;background:var(--g);border-radius:2px;height:7px}
 .mb i:nth-child(2){height:14px}.mb i:nth-child(3){height:10px}
 .mb.pl i{animation:eq .8s ease-in-out infinite alternate}
 .mb.pl i:nth-child(2){animation-delay:.2s}.mb.pl i:nth-child(3){animation-delay:.4s}
 @keyframes eq{to{height:18px}}
-.pg{position:fixed;top:0;left:0;height:2px;width:0;background:var(--g);z-index:40}
+.pg{position:fixed;top:0;left:0;height:2px;width:0;background:var(--g);z-index:40;box-shadow:0 0 8px var(--g)}
 .cv{position:fixed;width:180px;opacity:.7;z-index:1;pointer-events:none}
 .cv path{fill:none;stroke:var(--gd);stroke-width:1.2;stroke-dasharray:500;stroke-dashoffset:500;animation:dr 4s ease forwards}
 .cv circle{fill:var(--gd)}
@@ -33,7 +34,7 @@ h1{font-weight:200;font-size:clamp(3rem,14vw,5.5rem);letter-spacing:.08em;color:
 .amp{font-family:Georgia,serif;font-style:italic;color:var(--g);font-size:2.6rem;margin:4px 0}
 .div{display:flex;align-items:center;gap:14px;margin:30px 0;color:var(--g)}
 .div:before,.div:after{content:"";width:50px;height:1px;background:var(--gd)}
-.code{font-family:ui-monospace,Menlo,monospace;color:var(--g);font-size:.9rem;margin-top:22px;min-height:1.6em}
+.code{font-family:ui-monospace,Menlo,monospace;color:var(--g);font-size:.9rem;margin-top:22px;min-height:1.6em;background:rgba(3,26,18,.4);padding:6px 16px;border-radius:20px;border:1px solid rgba(143,122,69,.3)}
 .code:after{content:"|";animation:bl 1s infinite}
 @keyframes bl{50%{opacity:0}}
 .hp{max-width:520px;margin-top:22px;opacity:.85}
@@ -45,20 +46,20 @@ h2{font-weight:200;font-size:clamp(1.5rem,6vw,2.3rem);letter-spacing:.2em;text-t
 .card .n{font-family:Georgia,serif;font-style:italic;color:var(--gd);font-size:1.6rem}
 .btn{background:transparent;color:var(--g);border:1px solid var(--g);padding:13px 34px;border-radius:40px;font:400 .85rem Jost,sans-serif;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:.3s;margin-top:24px}
 .btn:hover{background:var(--g);color:#052a20;box-shadow:0 0 30px rgba(216,185,111,.5)}
-.out{margin-top:24px;width:100%;text-align:left;font-family:ui-monospace,Menlo,monospace;font-size:.88rem;color:#cfe8d8;border:1px dashed var(--gd);border-radius:16px;padding:18px;min-height:130px;white-space:pre-wrap;background:rgba(3,26,18,.55)}
+.out{margin-top:24px;width:100%;text-align:left;font-family:ui-monospace,Menlo,monospace;font-size:.88rem;color:#cfe8d8;border:1px dashed var(--gd);border-radius:16px;padding:18px;min-height:130px;white-space:pre-wrap;background:rgba(3,26,18,.55);transition:.3s}
 .out em{color:var(--g);font-style:normal}
 .qz{width:100%;text-align:left}
 .qz .q{font-size:1.1rem;margin:22px 0 8px;color:#fff}
-.qz .o{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 16px;background:rgba(3,26,18,.5);color:var(--tx);border:1px solid var(--gd);border-radius:30px;cursor:pointer;font:300 1rem Jost,sans-serif}
-.qz .o:hover{border-color:var(--g)}
-.qz .ok{background:#135f48;border-color:#7fe3b0}
-.qz .no{background:#5a1c1c;border-color:#e88}
+.qz .o{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 16px;background:rgba(3,26,18,.5);color:var(--tx);border:1px solid var(--gd);border-radius:30px;cursor:pointer;font:300 1rem Jost,sans-serif;transition:.3s}
+.qz .o:hover{border-color:var(--g);background:rgba(19,95,72,.4)}
+.qz .ok{background:#135f48;border-color:#7fe3b0;color:#fff}
+.qz .no{background:#5a1c1c;border-color:#e88;color:#fff}
 .acc{width:100%;text-align:left;margin-top:20px}
-.it{border:1px solid rgba(143,122,69,.6);border-radius:18px;margin:10px 0;overflow:hidden;background:rgba(3,26,18,.45)}
-.hd{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;color:var(--g);letter-spacing:.05em}
+.it{border:1px solid rgba(143,122,69,.6);border-radius:18px;margin:10px 0;overflow:hidden;background:rgba(3,26,18,.45);transition:.3s}
+.hd{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;color:var(--g);letter-spacing:.05em;font-weight:400}
 .hd:after{content:"+";transition:.3s;font-size:1.3rem;line-height:1}
 .it.open .hd:after{transform:rotate(135deg)}
-.bd{max-height:0;overflow:hidden;transition:max-height .5s;padding:0 20px}
+.bd{max-height:0;overflow:hidden;transition:max-height .5s ease, padding .5s ease;padding:0 20px}
 .it.open .bd{max-height:160px;padding-bottom:16px}
 .cnt{font:200 clamp(3rem,16vw,5.5rem) Jost,sans-serif;color:#fff;letter-spacing:.1em;text-shadow:0 0 30px rgba(216,185,111,.4);margin:14px 0}
 footer{text-align:center;padding:70px 22px calc(90px + env(safe-area-inset-bottom,0px));max-width:640px;margin:0 auto}
@@ -69,6 +70,8 @@ footer .card{margin:14px 0;font-style:italic}
 @keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
 .em{position:fixed;z-index:50;pointer-events:none;font-size:2rem;animation:up 2s ease-out forwards}
 @keyframes up{from{opacity:1}to{opacity:0;transform:translate(var(--x),var(--y)) scale(1.6)}}
+/* QO'SHIMCHA ANIMATSION BEZAKLAR */
+.draft-line{position:absolute;border:1px stroke var(--gd);opacity:.2;pointer-events:none}
 </style>
 </head>
 <body>
@@ -102,8 +105,8 @@ footer .card{margin:14px 0;font-style:italic}
 <footer><h2 data-k="s6"></h2><div id="stu"></div><div class="div">❧</div><p class="cap" data-k="ft"></p></footer>
 
 <script>
-/* ===== MUSIQA: audio URL shu yerda almashtiriladi (royalty-free mp3) ===== */
-const MUSIC_URL="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+/* ===== MUSIQA: Repozitoriyingizdagi yuklangan audio faylingiz ulangan ===== */
+const MUSIC_URL="Беҳруз Нуриддинов - Ustozlar.mp3";
 
 const T={
 uz:{cap:"Шогирдлар номидан",n1:"БОБУР",n2:"УСТОЗ",date:"1 октябрь · Устозлар куни",hp:"Азиз Бобур устоз! Сиз бизга фақат код ёзиш ва чизма чизишни эмас, ҳаётни тўғри қуришни ҳам ўргатдингиз.",s1:"Ҳикматлар",s2:"Дилдан тилаклар",s3:"Зукко информатик ва чизмачи",s4:"Олтин қоидалар",s5:"Миннатдорчилик",s6:"Шогирдлар тилаги",wb:"Тилак яратиш",wi:"Тугмани босинг...",tm:"Раҳмат, устоз! Миннатдорчилик вақти",cb:"Байрам саломи",ft:"Устозлар куни муборак бўлсин!",code:"print('Бобур устоз, байрамингиз билан!')",
@@ -190,13 +193,23 @@ document.querySelectorAll(".rv").forEach(e=>io.observe(e));
 addEventListener("scroll",()=>{$("#pg").style.width=scrollY/(document.body.scrollHeight-innerHeight)*100+"%"});
 
 /* ===== MUSIQA PLEYERI: tugma bosilsa Play/Pause ===== */
-const au=new Audio(MUSIC_URL);au.loop=true;au.volume=.5;
+const au=new Audio(MUSIC_URL);au.loop=true;au.volume=.6;
 $("#mb").onclick=()=>{if(au.paused){au.play().catch(()=>{});$("#mb").classList.add("pl")}else{au.pause();$("#mb").classList.remove("pl")}};
+
+/* Sahifaga bosganda avto-ijro ruxsati uchun audio tajribasi */
+document.body.addEventListener('click', function autoPlayOnce() {
+    if(au.paused) {
+        au.play().then(()=> {
+            $("#mb").classList.add("pl");
+        }).catch(()=>{});
+    }
+    document.body.removeEventListener('click', autoPlayOnce);
+}, { once: true });
 
 /* ===== FON: yaltiroq bokeh zarrachalari + 0/1 kod belgilari ===== */
 const cv=$("#bg"),cx=cv.getContext("2d");let W,H,P=[];
 function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;
-  P=Array.from({length:42},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*4+1,vy:-(Math.random()*.25+.05),vx:(Math.random()-.5)*.2,p:Math.random()*6,g:Math.random()>.65?["0","1","</>","∠","△"][Math.random()*5|0]:null}))}
+  P=Array.from({length:50},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*4+1,vy:-(Math.random()*.25+.05),vx:(Math.random()-.5)*.2,p:Math.random()*6,g:Math.random()>.65?["0","1","</>","∠","△","R8","C++"][Math.random()*7|0]:null}))}
 addEventListener("resize",rs);
 function loop(t){
   cx.clearRect(0,0,W,H);
@@ -209,6 +222,9 @@ function loop(t){
   requestAnimationFrame(loop)
 }
 rs();requestAnimationFrame(loop);setLang("uz");
+
+/* Klaviatura bilan feyerverk otish spetsial effekti */
+addEventListener("keydown",(e)=>{if(e.code==="Space"){burst(40)}});
 </script>
 </body>
 </html>
