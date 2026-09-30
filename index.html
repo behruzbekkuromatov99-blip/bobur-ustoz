@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Устозлар куни · Бобур устоз</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{--g:#d8b96f;--gd:#8f7a45;--em:#0a3d2f;--tx:#f3efe2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;font-weight:300;color:var(--tx);line-height:1.7;overflow-x:hidden;background:radial-gradient(ellipse at 50% 25%,#0f5240 0%,#083326 50%,#031a12 100%) fixed}
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.top,main,footer,.corner{position:relative;z-index:2}
+.top{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;z-index:30}
+.pill{display:flex;border:1px solid var(--gd);border-radius:40px;padding:5px;background:rgba(3,26,18,.6);backdrop-filter:blur(6px)}
+.pill button{background:none;border:0;color:var(--gd);padding:8px 14px;border-radius:30px;font:400 .85rem Jost,sans-serif;letter-spacing:.12em;cursor:pointer}
+.pill button.on{background:#135f48;color:#fff}
+.mb{width:52px;height:52px;border-radius:50%;border:1px solid var(--gd);background:rgba(3,26,18,.6);cursor:pointer;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding:17px 0;position:relative}
+.mb i{width:3px;background:var(--g);border-radius:2px;height:7px}
+.mb i:nth-child(2){height:14px}.mb i:nth-child(3){height:10px}
+.mb.pl i{animation:eq .8s ease-in-out infinite alternate}
+.mb.pl i:nth-child(2){animation-delay:.2s}.mb.pl i:nth-child(3){animation-delay:.4s}
+@keyframes eq{to{height:18px}}
+.pg{position:fixed;top:0;left:0;height:2px;width:0;background:var(--g);z-index:40}
+.cv{position:fixed;width:180px;opacity:.7;z-index:1;pointer-events:none}
+.cv path{fill:none;stroke:var(--gd);stroke-width:1.2;stroke-dasharray:500;stroke-dashoffset:500;animation:dr 4s ease forwards}
+.cv circle{fill:var(--gd)}
+@keyframes dr{to{stroke-dashoffset:0}}
+section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 22px 60px;max-width:860px;margin:0 auto}
+.cap{font-size:.85rem;letter-spacing:.35em;color:var(--g);text-transform:uppercase;font-weight:300}
+h1{font-weight:200;font-size:clamp(3rem,14vw,5.5rem);letter-spacing:.08em;color:#fff;line-height:1.15;text-shadow:0 0 30px rgba(255,255,255,.15)}
+.amp{font-family:Georgia,serif;font-style:italic;color:var(--g);font-size:2.6rem;margin:4px 0}
+.div{display:flex;align-items:center;gap:14px;margin:30px 0;color:var(--g)}
+.div:before,.div:after{content:"";width:50px;height:1px;background:var(--gd)}
+.code{font-family:ui-monospace,Menlo,monospace;color:var(--g);font-size:.9rem;margin-top:22px;min-height:1.6em}
+.code:after{content:"|";animation:bl 1s infinite}
+@keyframes bl{50%{opacity:0}}
+.hp{max-width:520px;margin-top:22px;opacity:.85}
+h2{font-weight:200;font-size:clamp(1.5rem,6vw,2.3rem);letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;width:100%;margin-top:26px}
+.card{border:1px solid rgba(143,122,69,.6);border-radius:18px;padding:24px 18px;background:rgba(3,26,18,.45);backdrop-filter:blur(4px);transition:.4s}
+.card:hover{transform:translateY(-6px);border-color:var(--g);box-shadow:0 0 30px rgba(216,185,111,.15)}
+.card b{display:block;color:var(--g);font-weight:400;letter-spacing:.06em;margin:8px 0 4px}
+.card .n{font-family:Georgia,serif;font-style:italic;color:var(--gd);font-size:1.6rem}
+.btn{background:transparent;color:var(--g);border:1px solid var(--g);padding:13px 34px;border-radius:40px;font:400 .85rem Jost,sans-serif;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:.3s;margin-top:24px}
+.btn:hover{background:var(--g);color:#052a20;box-shadow:0 0 30px rgba(216,185,111,.5)}
+.out{margin-top:24px;width:100%;text-align:left;font-family:ui-monospace,Menlo,monospace;font-size:.88rem;color:#cfe8d8;border:1px dashed var(--gd);border-radius:16px;padding:18px;min-height:130px;white-space:pre-wrap;background:rgba(3,26,18,.55)}
+.out em{color:var(--g);font-style:normal}
+.qz{width:100%;text-align:left}
+.qz .q{font-size:1.1rem;margin:22px 0 8px;color:#fff}
+.qz .o{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 16px;background:rgba(3,26,18,.5);color:var(--tx);border:1px solid var(--gd);border-radius:30px;cursor:pointer;font:300 1rem Jost,sans-serif}
+.qz .o:hover{border-color:var(--g)}
+.qz .ok{background:#135f48;border-color:#7fe3b0}
+.qz .no{background:#5a1c1c;border-color:#e88}
+.acc{width:100%;text-align:left;margin-top:20px}
+.it{border:1px solid rgba(143,122,69,.6);border-radius:18px;margin:10px 0;overflow:hidden;background:rgba(3,26,18,.45)}
+.hd{padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;color:var(--g);letter-spacing:.05em}
+.hd:after{content:"+";transition:.3s;font-size:1.3rem;line-height:1}
+.it.open .hd:after{transform:rotate(135deg)}
+.bd{max-height:0;overflow:hidden;transition:max-height .5s;padding:0 20px}
+.it.open .bd{max-height:160px;padding-bottom:16px}
+.cnt{font:200 clamp(3rem,16vw,5.5rem) Jost,sans-serif;color:#fff;letter-spacing:.1em;text-shadow:0 0 30px rgba(216,185,111,.4);margin:14px 0}
+footer{text-align:center;padding:70px 22px calc(90px + env(safe-area-inset-bottom,0px));max-width:640px;margin:0 auto}
+footer .card{margin:14px 0;font-style:italic}
+.rv{opacity:0;transform:translateY(40px);transition:1.1s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.cf{position:fixed;top:-20px;width:9px;height:15px;z-index:50;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+.em{position:fixed;z-index:50;pointer-events:none;font-size:2rem;animation:up 2s ease-out forwards}
+@keyframes up{from{opacity:1}to{opacity:0;transform:translate(var(--x),var(--y)) scale(1.6)}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="pg" id="pg"></div>
+<svg class="cv" style="top:0;left:0" viewBox="0 0 180 180"><path d="M20 0 Q30 60 90 90 Q130 110 135 160"/><circle cx="90" cy="90" r="4"/></svg>
+<svg class="cv" style="bottom:0;right:0" viewBox="0 0 180 180"><path d="M180 30 Q120 40 100 100 Q85 150 40 160"/><circle cx="100" cy="100" r="4"/><circle cx="62" cy="158" r="3"/></svg>
+
+<div class="top">
+  <div class="pill"><button data-l="uz" class="on">UZ</button><button data-l="tj">TJ</button><button data-l="ru">RU</button><button data-l="en">EN</button></div>
+  <button class="mb" id="mb" aria-label="Music"><i></i><i></i><i></i></button>
+</div>
+
+<main>
+<section>
+  <div class="cap" data-k="cap"></div>
+  <h1 style="margin-top:18px" data-k="n1"></h1>
+  <div class="amp">&amp;</div>
+  <h1 data-k="n2"></h1>
+  <div class="div">❧</div>
+  <div class="cap" data-k="date"></div>
+  <div class="code" id="code"></div>
+  <p class="hp" data-k="hp"></p>
+</section>
+<section><h2 class="rv" data-k="s1"></h2><div class="grid" id="wis"></div></section>
+<section><h2 class="rv" data-k="s2"></h2><button class="btn" id="wb" data-k="wb"></button><div class="out rv" id="wo"></div></section>
+<section><h2 class="rv" data-k="s3"></h2><div class="qz rv" id="qz"></div></section>
+<section><h2 class="rv" data-k="s4"></h2><div class="acc rv" id="acc"></div></section>
+<section><h2 class="rv" data-k="s5"></h2><p class="cap" style="margin-top:10px" data-k="tm"></p><div class="cnt" id="cnt">00:00</div><button class="btn" id="cb" data-k="cb"></button></section>
+</main>
+<footer><h2 data-k="s6"></h2><div id="stu"></div><div class="div">❧</div><p class="cap" data-k="ft"></p></footer>
+
+<script>
+/* ===== MUSIQA: audio URL shu yerda almashtiriladi (royalty-free mp3) ===== */
+const MUSIC_URL="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+
+const T={
+uz:{cap:"Шогирдлар номидан",n1:"БОБУР",n2:"УСТОЗ",date:"1 октябрь · Устозлар куни",hp:"Азиз Бобур устоз! Сиз бизга фақат код ёзиш ва чизма чизишни эмас, ҳаётни тўғри қуришни ҳам ўргатдингиз.",s1:"Ҳикматлар",s2:"Дилдан тилаклар",s3:"Зукко информатик ва чизмачи",s4:"Олтин қоидалар",s5:"Миннатдорчилик",s6:"Шогирдлар тилаги",wb:"Тилак яратиш",wi:"Тугмани босинг...",tm:"Раҳмат, устоз! Миннатдорчилик вақти",cb:"Байрам саломи",ft:"Устозлар куни муборак бўлсин!",code:"print('Бобур устоз, байрамингиз билан!')",
+W:[["Билим — чексиз код","Билим улашган сари кўпаяди."],["Аниқлик — гўзаллик","Чизмада бир чизиқ хато бўлса, бутун шакл бузилади."],["Одоб — энг яхши дастур","Ҳар қандай технологиядан устун — инсоний одоб."],["Хатодан қўрқманг","Хато — ўрганишнинг энг тез йўли."]],
+L:["Соғлиғингиз темир сервердек мустаҳкам бўлсин!","Ҳаётингиз чизмадек аниқ ва гўзал бўлсин!","Умрингиз чексиз циклдек узоқ бўлсин!","Шогирдларингиз сиздан ҳам ўзиб кетсин!"],
+Q:[["Бинар кодда 101 қайси сон?",["5","3","7"],0],["Учбурчак бурчаклари йиғиндиси?",["90°","180°","360°"],1],["Компьютернинг «мияси» қайси?",["Процессор","Сичқонча","Монитор"],0]],
+qr:["Тўғри! 🎉","Хато, яна уриниб кўринг!"],qs:"Натижа",
+R:[["Аввал ўйланг, кейин ёзинг","Коддан олдин алгоритм, чизмадан олдин режа."],["Тоза ишланг","Тоза код ва тоза чизма — тоза фикр белгиси."],["Савол беришдан уялманг","Савол бермаган ўрганмайди."]],
+S:["«Устозим, сиз бизга йўл кўрсатдингиз!»","«Раҳмат, сиз энг яхши устозсиз!»"]},
+tj:{cap:"Аз номи шогирдон",n1:"БОБУР",n2:"УСТОД",date:"1 октябр · Рӯзи устод",hp:"Устоди азиз Бобур! Шумо ба мо на танҳо барномасозӣ ва наққошӣ, балки дуруст сохтани зиндагиро низ омӯхтед.",s1:"Ҳикматҳо",s2:"Орзуҳои самимӣ",s3:"Информатик ва наққоши зирак",s4:"Қоидаҳои тиллоӣ",s5:"Миннатдорӣ",s6:"Орзуи шогирдон",wb:"Орзу эҷод кунед",wi:"Тугмаро пахш кунед...",tm:"Ташаккур, устод! Вақти миннатдорӣ",cb:"Салом ба ид",ft:"Рӯзи устод муборак!",code:"print('Устод Бобур, ид муборак!')",
+W:[["Дониш — коди беохир","Дониш бо мубодила афзуда мешавад."],["Дақиқӣ — зебоӣ","Як хати нодуруст тамоми нақшаро вайрон мекунад."],["Одоб — беҳтарин барнома","Аз ҳар технология болотар — одоби инсонӣ."],["Аз хато натарсед","Хато — роҳи зудтарини омӯзиш."]],
+L:["Саломатиатон мисли сервери оҳанин мустаҳкам бод!","Зиндагиатон мисли нақша дақиқ ва зебо бод!","Умратон мисли даври беохир дароз бод!","Шогирдонатон аз шумо ҳам пеш гузаранд!"],
+Q:[["Дар рамзи дуӣ 101 кадом адад аст?",["5","3","7"],0],["Ҷамъи кунҷҳои секунҷа?",["90°","180°","360°"],1],["«Майнаи» компютер кадом аст?",["Протсессор","Мушак","Монитор"],0]],
+qr:["Дуруст! 🎉","Хато, боз кӯшиш кунед!"],qs:"Натиҷа",
+R:[["Аввал андеша кун, баъд навис","Пеш аз код алгоритм, пеш аз нақша тарҳ."],["Тоза кор кун","Коди тоза ва нақшаи тоза — нишони фикри тоза."],["Аз савол шарм накун","Касе, ки напурсад, наомӯзад."]],
+S:["«Устод, шумо ба мо роҳ нишон додед!»","«Ташаккур, шумо беҳтарин устод ҳастед!»"]},
+ru:{cap:"От имени учеников",n1:"БОБУР",n2:"УСТОЗ",date:"1 октября · День учителя",hp:"Уважаемый Бобур устоз! Вы научили нас не только программировать и чертить, но и правильно строить жизнь.",s1:"Мудрости",s2:"Тёплые пожелания",s3:"Умный информатик и чертёжник",s4:"Золотые правила",s5:"Благодарность",s6:"Слова учеников",wb:"Создать пожелание",wi:"Нажмите кнопку...",tm:"Спасибо, учитель! Время благодарности",cb:"Праздничный салют",ft:"С Днём учителя!",code:"print('Бобур устоз, с праздником!')",
+W:[["Знание — бесконечный код","Знания растут, когда ими делишься."],["Точность — красота","Одна неверная линия портит весь чертёж."],["Уважение — лучшая программа","Выше любой технологии — человеческая вежливость."],["Не бойтесь ошибок","Ошибка — быстрый путь к знаниям."]],
+L:["Здоровья крепкого, как стальной сервер!","Пусть жизнь будет точной и красивой, как чертёж!","Жизни долгой, как бесконечный цикл!","Пусть ученики превзойдут вас!"],
+Q:[["Какое число в двоичном коде 101?",["5","3","7"],0],["Сумма углов треугольника?",["90°","180°","360°"],1],["Что называют «мозгом» компьютера?",["Процессор","Мышь","Монитор"],0]],
+qr:["Верно! 🎉","Ошибка, попробуйте снова!"],qs:"Результат",
+R:[["Сначала думай, потом пиши","Перед кодом — алгоритм, перед чертежом — план."],["Работай чисто","Чистый код и чертёж — признак чистых мыслей."],["Не стесняйся вопросов","Кто не спрашивает — не учится."]],
+S:["«Учитель, вы указали нам путь!»","«Спасибо, вы лучший учитель!»"]},
+en:{cap:"From your students",n1:"BOBUR",n2:"USTOZ",date:"October 1 · Teachers' Day",hp:"Dear Bobur ustoz! You taught us not only to code and to draw, but also how to build a good life.",s1:"Words of Wisdom",s2:"Heartfelt Wishes",s3:"Smart Coder & Draftsman",s4:"Golden Rules",s5:"Gratitude",s6:"From Your Students",wb:"Generate a wish",wi:"Press the button...",tm:"Thank you, teacher! Time of gratitude",cb:"Celebrate",ft:"Happy Teachers' Day!",code:"print('Happy holiday, Bobur ustoz!')",
+W:[["Knowledge is endless code","It only grows when it is shared."],["Precision is beauty","One wrong line spoils the whole drawing."],["Manners: the best program","Above any technology stands human respect."],["Don't fear mistakes","A mistake is the fastest way to learn."]],
+L:["May your health be strong as a steel server!","May your life be as precise and beautiful as a blueprint!","May your life run like an infinite loop!","May your students surpass you!"],
+Q:[["Which number is 101 in binary?",["5","3","7"],0],["Sum of a triangle's angles?",["90°","180°","360°"],1],["What is the computer's \"brain\"?",["Processor","Mouse","Monitor"],0]],
+qr:["Correct! 🎉","Wrong, try again!"],qs:"Score",
+R:[["Think first, then write","Algorithm before code, plan before drawing."],["Work clean","Clean code and clean drawings show a clean mind."],["Never fear questions","Who doesn't ask doesn't learn."]],
+S:["\"Teacher, you showed us the way!\"","\"Thank you, you are the best teacher!\""]}
+};
+let lang="uz",score=0;const $=s=>document.querySelector(s);
+
+function setLang(l){
+  lang=l;const t=T[l];document.documentElement.lang=l==="tj"?"tg":l;
+  document.querySelectorAll("[data-k]").forEach(e=>e.textContent=t[e.dataset.k]);
+  document.querySelectorAll(".pill button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+  $("#wis").innerHTML=t.W.map((w,i)=>`<div class="card"><div class="n">${["I","II","III","IV"][i]}</div><b>${w[0]}</b>${w[1]}</div>`).join("");
+  $("#acc").innerHTML=t.R.map(r=>`<div class="it"><div class="hd">${r[0]}</div><div class="bd">${r[1]}</div></div>`).join("");
+  document.querySelectorAll(".hd").forEach(h=>h.onclick=()=>h.parentNode.classList.toggle("open"));
+  $("#stu").innerHTML=t.S.map(s=>`<div class="card">${s}</div>`).join("");
+  $("#wo").textContent=t.wi;score=0;renderQuiz();typeCode();
+}
+document.querySelectorAll(".pill button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+
+let tt;function typeCode(){clearTimeout(tt);const s=T[lang].code,e=$("#code");let i=0;e.textContent="";(function n(){e.textContent=s.slice(0,i++);if(i<=s.length)tt=setTimeout(n,55)})()}
+
+$("#wb").onclick=()=>{
+  const L=T[lang].L,w=L[Math.random()*L.length|0];
+  $("#wo").innerHTML=`const ustoz = <em>"Bobur"</em>;\nfunction wish(){\n  return <em>"${w}"</em>;\n}\n\n//   △─────△\n//   │  ✦  │\n//   ▽─────▽`;
+  burst(24);
+};
+
+function renderQuiz(){
+  const Q=T[lang].Q;
+  $("#qz").innerHTML=Q.map((q,i)=>`<div class="q">${i+1}. ${q[0]}</div>`+q[1].map((o,j)=>`<button class="o" data-q="${i}" data-o="${j}">${o}</button>`).join("")+`<div id="r${i}" class="cap" style="margin-top:6px"></div>`).join("")+`<h3 id="sc" style="margin-top:24px;color:var(--g);font-weight:300;letter-spacing:.2em"></h3>`;
+  document.querySelectorAll(".o").forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.q,j=+b.dataset.o,q=Q[i];
+    if(b.parentNode.dataset["d"+i])return;
+    if(j===q[2]){b.classList.add("ok");b.parentNode.dataset["d"+i]=1;score++;$("#r"+i).textContent=T[lang].qr[0];$("#sc").textContent=`${T[lang].qs}: ${score}/${Q.length}`;burst(30)}
+    else{b.classList.add("no");$("#r"+i).textContent=T[lang].qr[1]}
+  });
+}
+
+function burst(n){
+  const c=["#d8b96f","#fff3c4","#7fe3b0","#ffffff","#f0c75e"];
+  for(let i=0;i<n;i++){const d=document.createElement("div");d.className="cf";
+    d.style.left=Math.random()*100+"vw";d.style.background=c[Math.random()*5|0];
+    d.style.animationDuration=(2+Math.random()*2.5)+"s";d.style.animationDelay=Math.random()*.6+"s";
+    d.style.borderRadius=Math.random()>.5?"50%":"2px";document.body.appendChild(d);setTimeout(()=>d.remove(),5500)}
+}
+$("#cb").onclick=()=>{
+  burst(150);
+  for(let i=0;i<14;i++){const e=document.createElement("div");e.className="em";e.textContent=["🎆","✨","🎇","⭐","🎉"][i%5];
+    e.style.left=(15+Math.random()*70)+"vw";e.style.top=(20+Math.random()*50)+"vh";
+    e.style.setProperty("--x",(Math.random()*160-80)+"px");e.style.setProperty("--y",(Math.random()*-160)+"px");
+    document.body.appendChild(e);setTimeout(()=>e.remove(),2100)}
+};
+
+let sec=0;setInterval(()=>{sec++;$("#cnt").textContent=String(sec/60|0).padStart(2,"0")+":"+String(sec%60).padStart(2,"0")},1000);
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("in")}),{threshold:.15});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+addEventListener("scroll",()=>{$("#pg").style.width=scrollY/(document.body.scrollHeight-innerHeight)*100+"%"});
+
+/* ===== MUSIQA PLEYERI: tugma bosilsa Play/Pause ===== */
+const au=new Audio(MUSIC_URL);au.loop=true;au.volume=.5;
+$("#mb").onclick=()=>{if(au.paused){au.play().catch(()=>{});$("#mb").classList.add("pl")}else{au.pause();$("#mb").classList.remove("pl")}};
+
+/* ===== FON: yaltiroq bokeh zarrachalari + 0/1 kod belgilari ===== */
+const cv=$("#bg"),cx=cv.getContext("2d");let W,H,P=[];
+function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight;
+  P=Array.from({length:42},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*4+1,vy:-(Math.random()*.25+.05),vx:(Math.random()-.5)*.2,p:Math.random()*6,g:Math.random()>.65?["0","1","</>","∠","△"][Math.random()*5|0]:null}))}
+addEventListener("resize",rs);
+function loop(t){
+  cx.clearRect(0,0,W,H);
+  P.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;if(p.y<-20){p.y=H+20;p.x=Math.random()*W}
+    const a=.35+.35*Math.sin(t/900+p.p);
+    if(p.g){cx.font="14px monospace";cx.fillStyle=`rgba(216,185,111,${a*.5})`;cx.fillText(p.g,p.x,p.y)}
+    else{const g=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*5);g.addColorStop(0,`rgba(255,244,210,${a})`);g.addColorStop(1,"rgba(255,244,210,0)");cx.fillStyle=g;cx.beginPath();cx.arc(p.x,p.y,p.r*5,0,7);cx.fill()}
+  });
+  requestAnimationFrame(loop)
+}
+rs();requestAnimationFrame(loop);setLang("uz");
+</script>
+</body>
+</html>
